@@ -1,8 +1,27 @@
-<div>
+<div REITER1 class="column">
+    <div class="margin-bottom">
+        <span>Gib eine Zeichenkette ein, die nur aus folgenden Zeichen besteht: acdefhlmnoprstuw.</span>
+    </div> 
 
-    <span>In welche Einrichgung geht ein Kind nach dem Kindergarten?</span>
-    <input id="input" ype="text" placeholder="Lösung">
-    <!-- <button (click)="getHash(searchValue)">getHash</button> -->
-    <label id="label"></label>
+    <div class="margin-bottom">
+        <input class="input" #inputText type="text" placeholder="Gib eine Zeichenkette ein">
+        <button class="button" (click)="GetHashwert(inputText)">Prüfen</button>
+    </div> 
 
+    <div>
+        <!--hier wird Hashwert oder Fehlermeldung angezeigt-->
+        <label class="label">Ergebnis ->{{ hashwertResult }}</label>
+    </div> 
 </div>
+
+
+<!-- <div REITER2>
+    <span>Gib einen Hashwert ein, um die gesuchte Zeichenkette zu finden.</span>
+
+    <input #inputNumber type="number" placeholder="Hashwert">
+
+    <button (click)="handleGetZeichenkette(inputNumber)">Prüfen</button>
+
+    hier wird gesuchte Zeichenkette oder Fehlermeldung angezeigt
+    <label>{{ hashZeichenketteResult }}</label>
+</div> -->

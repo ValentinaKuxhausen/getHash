@@ -1,0 +1,44 @@
+// orientiert am Homepage-Design von all4schools
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.input {
+    padding: 12px 20px 12px 12px;
+    background-color: #F4F4F4;
+    border: none;
+    font-family: inherit;
+}
+
+input:focus {
+    outline: none;
+}
+
+::-webkit-input-placeholder { 
+    font-family: 'Heebo', sans-serif;  
+  }
+
+  .button {
+    background-color: #F0AB0B;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    margin-left: 12px;
+
+    &:hover {
+        cursor: pointer;
+    }
+  }
+
+  .label {
+      background-color: #FCF8ED;
+      padding: 12px 100px 12px 12px;
+      
+  }

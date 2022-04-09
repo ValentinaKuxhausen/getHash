@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ccmedia';
+  hashwertResult!: number | string;
 
 
   getHash(string: string) {   // getHash('schule')
@@ -19,46 +20,23 @@ export class AppComponent {
   }
 
 
-  //////FUNKTIONIERT NICHT
-  reverseHash(number: number) {            // reverseHash(18794359164)
-    number = number % 37;
-    let resultString = ''
-    const result = [];
+  // Funktion für Reiter 1
+  GetHashwert(input: HTMLInputElement) {
     const letters = 'acdefhlmnoprstuw';
+    console.log(input);
+    const invalid = Array.from(input.value).some(x=> !letters.includes(x));
 
-    for (let i = result.length - 1; i >= 0; i--) {
-      let indexLetter = number % 37;
-
-      resultString += result[i];
-      result.push(letters[indexLetter]);
-    }
-
-    if (number == 7) return resultString;  // return schule
-    else return 'false';                   // return false
+    this.hashwertResult = invalid ? 'Fehlermeldung: Ungültige Zeichenkette' : 'Hashwert für die eingegebene Zeichenkette: ' + this.getHash(input.value);
   }
 
 
-  deHash(num: number, numLetters: number) {  // deHash(18794359164, 6) 
-    let result = [];
-    const letters = 'acdefhlmnoprstuw';
-    for (let i = 0; i < numLetters; i++) {
-      let indexLetter = num % 37;
-      num = (num - num % 37) / 37;
-      result.push(letters[indexLetter]);
-    }
+  // Funktion für Reiter 2
+  // handleGetZeichenkette(input: HTMLInputElement) {
+  //   console.log(input);
+  //   const invalid = Array.from(input.value).some(x=> !letters.includes(x));
 
-    num = num % 37;
-    let resultString = '';
-    for (let i = result.length - 1; i >= 0; i--) {
-      resultString += result[i];
-    }
-    if (num == 7) return resultString;      // return schule
-    else return 'false';                    // return false
-  }
-
-
-
-
+  //   this.hashZeichenketteResult = invalid ? 'Fehler: Es wurde keine passende Zeichenkette gefunden.' : this.getHash(input.value);
+  // }
 
 
 }
