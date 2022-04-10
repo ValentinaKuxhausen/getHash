@@ -1,3 +1,8 @@
+<div class="margin-bottom align-center">
+    <h3>Hier ist die Aufgabenstellung als PDF-Datei</h3>
+    <img src="assets/img/pdf.png" href="http://valentina-kuxhausen.developerakademie.net/Bewerber%20Eignungsaufgabe.pdf">
+</div>
+
 <div REITER1 class="column">
     <div class="margin-bottom">
         <span>Gib eine Zeichenkette ein, die nur aus folgenden Zeichen besteht: acdefhlmnoprstuw.</span>
@@ -10,18 +15,37 @@
 
     <div>
         <!--hier wird Hashwert oder Fehlermeldung angezeigt-->
-        <label class="label">Ergebnis ->{{ hashwertResult }}</label>
+        <label class="label margin-bottom">{{ hashwertResult }}</label>
     </div> 
 </div>
 
 
-<!-- <div REITER2>
-    <span>Gib einen Hashwert ein, um die gesuchte Zeichenkette zu finden.</span>
+<div REITER2 class="column">
+    <div class="margin-bottom">
+        <span>Gib einen Hashwert ein, um die gesuchte Zeichenkette zu finden.</span>
+    </div> 
 
-    <input #inputNumber type="number" placeholder="Hashwert">
+    <div class="margin-bottom">
+        <input class="input" type="number" 
+        placeholder="Gib einen Hashwert ein">
+        <button class="button">Prüfen</button>
+    </div>
 
-    <button (click)="handleGetZeichenkette(inputNumber)">Prüfen</button>
+    <div>
+        <!-- hier wird gesuchte Zeichenkette oder Fehlermeldung angezeigt -->
+        <label class="label margin-bottom"></label>
+    </div>
+</div>
 
-    hier wird gesuchte Zeichenkette oder Fehlermeldung angezeigt
-    <label>{{ hashZeichenketteResult }}</label>
-</div> -->
+<!-- ////////////////////TABS -->
+
+<div ng-controller="TabsDemoCtrl">
+    <p>Select a tab by setting active binding to true:</p>
+    <p>
+      <button type="button" class="btn btn-default btn-sm" ng-click="active = 1">Select second tab</button>
+      <button type="button" class="btn btn-default btn-sm" ng-click="active = 2">Select third tab</button>
+    </p>
+    <p>
+      <button type="button" class="btn btn-default btn-sm" ng-click="tabs[1].disabled = ! tabs[1].disabled">Enable / Disable third tab</button>
+    </p>
+</div>  

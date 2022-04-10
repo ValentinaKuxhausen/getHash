@@ -1,4 +1,16 @@
 // orientiert am Homepage-Design von all4schools
+h3 {
+    margin-right: 10px;
+}
+
+img {
+    cursor: pointer;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
 
 .column {
     display: flex;
@@ -10,7 +22,7 @@
 }
 
 .input {
-    padding: 12px 20px 12px 12px;
+    padding: 10px 20px 10px 10px;
     background-color: #F4F4F4;
     border: none;
     font-family: inherit;
@@ -22,9 +34,9 @@ input:focus {
 
 ::-webkit-input-placeholder { 
     font-family: 'Heebo', sans-serif;  
-  }
+}
 
-  .button {
+.button {
     background-color: #F0AB0B;
     color: white;
     border: none;
@@ -35,10 +47,22 @@ input:focus {
     &:hover {
         cursor: pointer;
     }
-  }
+}
 
-  .label {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.label {
       background-color: #FCF8ED;
       padding: 12px 100px 12px 12px;
       
-  }
+}
+
+////////////////////TABS
+
+form.tab-form-demo .tab-pane {
+    margin: 20px 20px;
+}
