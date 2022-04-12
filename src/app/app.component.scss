@@ -56,12 +56,6 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-.label {
-      background-color: #FCF8ED;
-      padding: 12px 100px 12px 12px;
-      
-}
-
 .tabs {
     display: flex;
     flex-direction: row;
@@ -90,10 +84,19 @@ ul {
 }
 
 a {
-    margin-right: 48px;
     text-decoration: none;
 
     &:hover {
         cursor: pointer;
     }
+}
+
+.nav-link {
+    padding: 0;
+    margin-right: 32px;
+}
+
+.content-value {
+    border: 0px 1px 1px 1px solid #ddd;
+    margin-top: 20px;
 }
