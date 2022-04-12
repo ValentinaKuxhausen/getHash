@@ -37,20 +37,20 @@
     </div>
 </div>
 
-<!-- ////////////////////TABS -->
+<!-- Visualisierung tabs -->
+<div class="container">
+    <div class="jumbotron">
+        <h1>Welcome</h1>
+        <h2>Angular & Bootstrap</h2>
+    </div>
 
-<div ng-controller="TabsDemoCtrl">
-    <p>Select a tab by setting active binding to true:</p>
-    <p>
-      <button type="button" class="btn btn-default btn-sm" ng-click="active = 1">Select second tab</button>
-      <button type="button" class="btn btn-default btn-sm" ng-click="active = 2">Select third tab</button>
-    </p>
-    <p>
-      <button type="button" class="btn btn-default btn-sm" ng-click="tabs[1].disabled = ! tabs[1].disabled">Enable / Disable third tab</button>
-    </p>
-</div>  
+    <div class="panel panel-primary">
+        <div class="panel-deading">
+            Status
+        </div>
+        <div class="panel-body">
+            <h3>{{ title }}</h3>
+        </div>
+    </div>
 
-
-<!-- /// nach der bootrap intallation -->
-
-<div class="alert-warning">hallo welt</div>
+</div>
