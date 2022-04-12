@@ -39,8 +39,12 @@ export class AppComponent {
   // }
 
 
-  //cities test
+  id: any = "";
+  changeTab(ids: any) {
+    this.id = ids;
+    console.log(this.id);
 
+  }
 
   
 

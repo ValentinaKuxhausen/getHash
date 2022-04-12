@@ -5,20 +5,19 @@
     </a>
 </div>
 
-<!-- Visualisierung tabs navigation -->
-<nav>
-    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Reiter 1</button>
-      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Reiter 2</button>
-    </div>
-  </nav>
-
-  <div class="tab-content" id="nav-tabContent">
-      <!-- Content Reiter 1 -->
-    <div class="tab-pane fade show active" id="nav-1" role="tabpanel" aria-labelledby="nav-1-tab">
-        <div REITER1 class="column">
+<div TABS>
+    <ul class="tabs">
+        <li class="nav-item" id="reiter1" (click)="changeTab('reiter1')">
+            <a class="nav-link" href="#"> Reiter 1</a>
+        </li>
+        <li class="nav-item" id="reiter2" (click)="changeTab('reiter2')">
+            <a class="nav-link" href="#">Reiter 2</a>
+        </li>
+    </ul>
+    <div CONTENT class="content">
+        <div REITER1 class="content-value column" *ngIf="id === 'reiter1'">
             <div class="margin-bottom">
-                <span>Gib eine Zeichenkette ein, die nur aus folgenden Zeichen besteht: acdefhlmnoprstuw.</span>
+                <span>Gib eine Zeichenkette ein, die nur aus folgenden Zeichen besteht: <i>acdefhlmnoprstuw.</i></span>
             </div>  
             <div class="margin-bottom">
                 <input class="input" #inputText type="text" placeholder="Gib eine Zeichenkette ein">
@@ -26,14 +25,10 @@
             </div> 
             <div>
                 <!--hier wird Hashwert oder Fehlermeldung angezeigt-->
-                <label class="label margin-bottom">{{ hashwertResult }}</label>
+            <label class="label margin-bottom">{{ hashwertResult }}</label>
             </div> 
-        </div>        
-    </div>
-
-      <!-- Content Reiter 1 -->
-    <div class="tab-pane fade" id="nav-2" role="tabpanel" aria-labelledby="nav-2-tab">
-        <div REITER2 class="column">
+        </div>      
+        <div REITER2 class="content-value column" *ngIf="id === 'reiter2'">
             <div class="margin-bottom">
                 <span>Gib einen Hashwert ein, um die gesuchte Zeichenkette zu finden.</span>
             </div> 
@@ -46,7 +41,6 @@
                 <!-- hier wird gesuchte Zeichenkette oder Fehlermeldung angezeigt -->
                 <label class="label margin-bottom"></label>
             </div>
-        </div>       
+        </div>           
     </div>
-  </div>
-
+</div>
