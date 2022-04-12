@@ -1,56 +1,52 @@
 <div class="margin-bottom align-center">
     <h3>Hier ist die Aufgabenstellung als PDF-Datei</h3>
-    <img src="assets/img/pdf.png" href="http://valentina-kuxhausen.developerakademie.net/Bewerber%20Eignungsaufgabe.pdf">
+    <a target="_blank" href="assets/Bewerber Eignungsaufgabe.pdf">
+        <img src="assets/img/pdf.png">
+    </a>
 </div>
 
-<div REITER1 class="column">
-    <div class="margin-bottom">
-        <span>Gib eine Zeichenkette ein, die nur aus folgenden Zeichen besteht: acdefhlmnoprstuw.</span>
-    </div> 
+<!-- Visualisierung tabs navigation -->
+<nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Reiter 1</button>
+      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Reiter 2</button>
+    </div>
+  </nav>
 
-    <div class="margin-bottom">
-        <input class="input" #inputText type="text" placeholder="Gib eine Zeichenkette ein">
-        <button class="button" (click)="GetHashwert(inputText)">Prüfen</button>
-    </div> 
-
-    <div>
-        <!--hier wird Hashwert oder Fehlermeldung angezeigt-->
-        <label class="label margin-bottom">{{ hashwertResult }}</label>
-    </div> 
-</div>
-
-
-<div REITER2 class="column">
-    <div class="margin-bottom">
-        <span>Gib einen Hashwert ein, um die gesuchte Zeichenkette zu finden.</span>
-    </div> 
-
-    <div class="margin-bottom">
-        <input class="input" type="number" 
-        placeholder="Gib einen Hashwert ein">
-        <button class="button">Prüfen</button>
+  <div class="tab-content" id="nav-tabContent">
+      <!-- Content Reiter 1 -->
+    <div class="tab-pane fade show active" id="nav-1" role="tabpanel" aria-labelledby="nav-1-tab">
+        <div REITER1 class="column">
+            <div class="margin-bottom">
+                <span>Gib eine Zeichenkette ein, die nur aus folgenden Zeichen besteht: acdefhlmnoprstuw.</span>
+            </div>  
+            <div class="margin-bottom">
+                <input class="input" #inputText type="text" placeholder="Gib eine Zeichenkette ein">
+                <button class="button" (click)="GetHashwert(inputText)">Prüfen</button>
+            </div> 
+            <div>
+                <!--hier wird Hashwert oder Fehlermeldung angezeigt-->
+                <label class="label margin-bottom">{{ hashwertResult }}</label>
+            </div> 
+        </div>        
     </div>
 
-    <div>
-        <!-- hier wird gesuchte Zeichenkette oder Fehlermeldung angezeigt -->
-        <label class="label margin-bottom"></label>
+      <!-- Content Reiter 1 -->
+    <div class="tab-pane fade" id="nav-2" role="tabpanel" aria-labelledby="nav-2-tab">
+        <div REITER2 class="column">
+            <div class="margin-bottom">
+                <span>Gib einen Hashwert ein, um die gesuchte Zeichenkette zu finden.</span>
+            </div> 
+            <div class="margin-bottom">
+                <input class="input" type="number" 
+                placeholder="Gib einen Hashwert ein">
+                <button class="button">Prüfen</button>
+            </div>       
+            <div>
+                <!-- hier wird gesuchte Zeichenkette oder Fehlermeldung angezeigt -->
+                <label class="label margin-bottom"></label>
+            </div>
+        </div>       
     </div>
-</div>
+  </div>
 
-<!-- Visualisierung tabs -->
-<div class="container">
-    <div class="jumbotron">
-        <h1>Welcome</h1>
-        <h2>Angular & Bootstrap</h2>
-    </div>
-
-    <div class="panel panel-primary">
-        <div class="panel-deading">
-            Status
-        </div>
-        <div class="panel-body">
-            <h3>{{ title }}</h3>
-        </div>
-    </div>
-
-</div>
